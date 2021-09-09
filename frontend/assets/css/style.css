@@ -92,13 +92,29 @@ body {
     padding-top: 8px;
 }
 
+.screen-content {
+    height: 100%;
+}
 
-/* Schedule name*/
+
+/* Schedule bar*/
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .schedule-h1 {
     margin-top: 20px;
     margin-bottom: 15px;
     font-size: 30px;
+}
+
+.top-bar button {
+    background-color: var(--iphone-app-back);
+    color: white;
+    height: 20px;
 }
 
 
@@ -127,6 +143,21 @@ body {
     content: "\f055";
     font-size: 25px;
     margin-left: 10px;
+}
+
+
+/* NAV BAR */
+
+.top-bar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 15px;
 }
 
 
@@ -161,6 +192,19 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+.contact-title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fa-plus {
+    color: white;
+    margin-left: 10px;
+    font-size: 15px;
 }
 
 
@@ -286,4 +330,100 @@ body {
 .button-submit {
     background-image: linear-gradient( to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
     box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+
+/* Error field and success fields*/
+
+.error {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    z-index: 1;
+    bottom: 10px;
+    position: absolute;
+    display: block;
+    background: red;
+    border-radius: 10px;
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error p {
+    text-align: start;
+    line-height: 12px;
+    margin: 0%;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.success {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    z-index: 1;
+    bottom: 10px;
+    position: absolute;
+    display: block;
+    background: green;
+    border-radius: 10px;
+    width: 100%;
+    height: 35px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success p {
+    text-align: start;
+    line-height: 12px;
+    margin: 0%;
+    padding: 5px;
+    font-size: 10px;
+}
+
+
+/* Contact index*/
+
+.profile-picture {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture i {
+    text-align: center;
+    font-size: 70px;
+}
+
+.fix-height {
+    height: 60%;
+}
+
+.return-agenda {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.return-agenda a {
+    padding-top: 10px;
+    padding-left: 5px;
+    text-align: start;
+    text-decoration: none;
+}
+
+.return-agenda a i {
+    color: white;
+    font-size: 16px;
 }

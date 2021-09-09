@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LogIn</title>
+    <title>Register</title>
 </head>
 
 <body>
@@ -25,12 +25,12 @@
 
             <div class="top-bar">
                 <a href="/">Agenda</a>
-                <h1 class="schedule-h1">Log In</h1>
-                <a href="/register/index">Register</a>
+                <h1 class="schedule-h1">Register</h1>
+                <a href="/login/index">Log In</a>
             </div>
 
             <div class="log-in-form">
-                <form action="/login/login" class="form-style" method="POST">
+                <form action="/register/register" class="form-style" method="POST">
                     <input type="hidden" name="_csrf" value=<%=csrfToken%>>
                     <div class="container-field-style">
                         <label>Email:</label>
@@ -42,7 +42,7 @@
                         <input type="password" class="fields" name="password-field">
                     </div>
 
-                    <button class="button-submit">Submit</button>
+                    <button class="button-submit">Register</button>
 
                 </form>
             </div>

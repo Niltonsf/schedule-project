@@ -23,29 +23,44 @@
                 </div>
             </div>
 
-            <h1 class="schedule-h1">Schedule</h1>
+            <div class="screen-content">
+                <% if(!user) { %>
+                    <div class="top-bar">
+                        <a href="/register/index">Register</a>
+                        <h1 class="schedule-h1">Schedule</h1>
+                        <a href="/login/index">Log In</a>
+                    </div>
+                    <% } else { %>
+                        <div class="top-bar">
+                            <h1 class="schedule-h1">Schedule</h1>
+                            <a href="/login/logout">Log out</a>
+                        </div>
+                        <% } %>
 
-            <div class="contact-title">
-                <h2>Your contacts</h2>
-                <div class="line"></div>
+                            <div class="contact-title">
+                                <h2>Your contacts</h2>
+                                <div class="line"></div>
+                                <% if(user) { %>
+                                    <a href="contact/index"><i class="fas fa-plus"></i></a>
+                                    <% } %>
+                            </div>
+
+                            <div class="contact-tile">
+                                <div class="contact-icon">
+                                    <i class="far fa-user-circle"></i>
+                                </div>
+
+                                <div class="contact-data">
+                                    <p>Geovana Tschannerl</p>
+                                    <p>(41) 99161-4400</p>
+                                    <p>geovanatdn@gmail.com</p>
+                                </div>
+
+                                <div class="contact-icon-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
             </div>
-
-            <div class="contact-tile">
-                <div class="contact-icon">
-                    <i class="far fa-user-circle"></i>
-                </div>
-
-                <div class="contact-data">
-                    <p>Geovana Tschannerl</p>
-                    <p>(41) 99161-4400</p>
-                    <p>geovanatdn@gmail.com</p>
-                </div>
-
-                <div class="contact-icon-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </div>
-
             <div class="iphone-line"></div>
         </div>
 

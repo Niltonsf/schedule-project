@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "bcryptjs": "^2.4.3",
         "connect-flash": "^0.1.1",
         "connect-mongo": "^4.5.0",
         "core-js": "^3.16.4",
@@ -24,7 +25,8 @@
         "helmet": "^4.6.0",
         "mongoose": "^6.0.5",
         "regenerator-runtime": "^0.13.9",
-        "style-loader": "^3.2.1"
+        "style-loader": "^3.2.1",
+        "validator": "^13.6.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.12",

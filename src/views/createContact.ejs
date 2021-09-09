@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="iphone-x">
+
+            <div class="iphone-nav-top">
+                <p>9:59</p>
+                <div class="iphone-nav-icons">
+                    <i class="fas fa-signal spacing-notch"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+            </div>
+
+            <div class="return-agenda">
+                <a href="/"><i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="profile-picture">
+                <i class="far fa-user-circle"></i>
+            </div>
+
+            <div class="screen-content">
+                <div class="log-in-form fix-height">
+                    <form action="/contact/register" class="form-style" method="POST">
+                        <input type="hidden" name="_csrf" value=<%=csrfToken%>>
+                        <div class="container-field-style">
+                            <label>Full Name:</label>
+                            <input value="<%= contato.fullName %>" type="text" class="fields" name="fullName">
+                        </div>
+
+                        <div class="container-field-style">
+                            <label>Email:</label>
+                            <input value="<%= contato.email %>" type="email" class="fields" name="email">
+                        </div>
+
+                        <div class="container-field-style">
+                            <label>Phone:</label>
+                            <input value="<%= contato.phone %>" type="number" class="fields" name="phone">
+                        </div>
+
+                        <button class="button-submit">Salvar</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <%- include('includes/messages'); %>
+                <div class="iphone-line"></div>
+        </div>
+
+    </section>
+
+    <script src="https://kit.fontawesome.com/313dbfcd46.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/bundle.js"></script>
+
+</body>
+
+</html>
