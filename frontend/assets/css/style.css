@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+    --primary-color: #7159c1;
+    --primary-color-darker: rgb(9, 48, 56);
+    --iphone-app-back: #080808;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.iphone-x {
+    background: #121212;
+    height: 678px;
+    width: 314px;
+    padding: 20px;
+    padding-top: 25px;
+    display: inline-block;
+    border: 12px solid #080808;
+    border-radius: 44px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    position: relative;
+}
+
+.iphone-x:before {
+    position: absolute;
+    left: calc(50% - 28%);
+    top: 0;
+    width: 56%;
+    background: var(--iphone-app-back);
+    height: 26px;
+    content: "";
+    border-radius: 0 0 15px 15px;
+}
+
+.iphone-line {
+    bottom: 10px;
+    position: absolute;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 6px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iphone-nav-top {
+    top: 0;
+    width: 88%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iphone-nav-top p {
+    font-size: 11px;
+    padding-left: 7px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.iphone-nav-icons {
+    display: flex;
+}
+
+.iphone-nav-icons i {
+    font-size: 10px;
+    margin-right: 3px;
+    padding-top: 8px;
+}
+
+
+/* Schedule name*/
+
+.schedule-h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+
+/* Text field and add button part*/
+
+.container-add-user {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.input-add-user {
+    width: 90%;
+    border-radius: 6px;
+    height: 30px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: solid 2px var(--primary-color);
+    background-color: var(--iphone-app-back);
+    text-align: left;
+    justify-content: left;
+}
+
+.fa-plus-square:before {
+    content: "\f055";
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+
+/* Showing contact styles */
+
+.contact-title {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.contact-title h2 {
+    font-size: 10px;
+    text-align: end;
+    margin: 0px;
+    bottom: 0;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+.contact-title div {
+    display: block;
+    background: white;
+    opacity: 0.5;
+    border-radius: 10px;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Contact tile format*/
+
+.contact-tile {
+    width: 100%;
+    display: flex;
+    border: solid 2px var(--primary-color);
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    align-items: center;
+}
+
+.contact-icon {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.fa-user-circle {
+    font-size: 28px;
+}
+
+.contact-data p {
+    flex-direction: column;
+    text-align: start;
+    line-height: 15px;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+}
+
+.contact-icon-arrow {
+    display: inherit;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.contact-icon-arrow i {
+    text-align: end;
+    font-size: 13px;
+}
+
+
+/* Login fields */
+
+.log-in-form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    padding: 0;
+    margin: 0;
+}
+
+.form-style {
+    display: inherit;
+    align-items: inherit;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-field-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.container-field-style label {
+    font-size: 12px;
+    margin-right: auto;
+    padding-left: 14px;
+}
+
+.fields {
+    background-color: var(--iphone-app-back);
+    color: inherit;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: inherit;
+    height: 35px;
+    border: 2px solid var(--primary-color);
+    border-radius: 7px;
+}
+
+.button-submit {
+    width: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 35px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.button-submit:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.button-submit:focus {
+    outline: none;
+}
+
+.button-submit {
+    background-image: linear-gradient( to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
