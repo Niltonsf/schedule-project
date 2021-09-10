@@ -38,6 +38,7 @@ body {
     border-radius: 44px;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     position: relative;
+    overflow-y: hidden;
 }
 
 .iphone-x:before {
@@ -220,6 +221,7 @@ body {
     padding-top: 6px;
     padding-bottom: 6px;
     align-items: center;
+    margin-bottom: 12px;
 }
 
 .contact-icon {
@@ -230,6 +232,10 @@ body {
 
 .fa-user-circle {
     font-size: 28px;
+}
+
+.contact-data {
+    width: 100%;
 }
 
 .contact-data p {
@@ -245,11 +251,28 @@ body {
     display: inherit;
     width: 100%;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .contact-icon-arrow i {
     text-align: end;
     font-size: 13px;
+}
+
+.contact-icon-arrow a {
+    text-decoration: none;
+    text-align: end;
+    line-height: 10px;
+}
+
+.space1 {
+    margin-bottom: 13px;
+    color: white;
+}
+
+.space2 {
+    margin-bottom: 0px;
+    color: white;
 }
 
 

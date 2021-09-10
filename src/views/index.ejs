@@ -45,21 +45,30 @@
                                     <% } %>
                             </div>
 
-                            <div class="contact-tile">
-                                <div class="contact-icon">
-                                    <i class="far fa-user-circle"></i>
-                                </div>
+                            <% contatos.forEach(contato => {%>
+                                <div class="contact-tile">
+                                    <div class="contact-icon">
+                                        <i class="far fa-user-circle"></i>
+                                    </div>
 
-                                <div class="contact-data">
-                                    <p>Geovana Tschannerl</p>
-                                    <p>(41) 99161-4400</p>
-                                    <p>geovanatdn@gmail.com</p>
-                                </div>
+                                    <div class="contact-data">
+                                        <p>
+                                            <%= contato.fullName %>
+                                        </p>
+                                        <p>
+                                            <%= contato.phone %>
+                                        </p>
+                                        <p>
+                                            <%= contato.email %>
+                                        </p>
+                                    </div>
 
-                                <div class="contact-icon-arrow">
-                                    <i class="fas fa-arrow-right"></i>
+                                    <div class="contact-icon-arrow">
+                                        <a href="/contact/index/<%= contato.id %>"><i class="fas fa-arrow-right space1"></i></a>
+                                        <a href="/contact/delete/<%= contato.id%>"><i class="far fa-minus-square space2"></i></a>
+                                    </div>
                                 </div>
-                            </div>
+                                <% }); %>
             </div>
             <div class="iphone-line"></div>
         </div>

@@ -62,3 +62,16 @@ exports.edit = async(req, res) => {
     }
 
 };
+
+exports.delete = async(req, res) => {
+    if (!req.params.id) return res.render('404');
+
+    const contato = await Contato.deleteContact(req.params.id);
+
+    if (!contato) return res.render('404');
+
+    req.flash('success', 'Contact deleted');
+    req.session.save(() => {
+        return res.redirect('back');
+    });
+};
