@@ -33,26 +33,30 @@
 
             <div class="screen-content">
                 <div class="log-in-form fix-height">
-                    <form action="/contact/register" class="form-style" method="POST">
-                        <input type="hidden" name="_csrf" value=<%=csrfToken%>>
-                        <div class="container-field-style">
-                            <label>Full Name:</label>
-                            <input value="<%= contato.fullName %>" type="text" class="fields" name="fullName">
-                        </div>
+                    <% if(contato.id) { %>
+                        <form action="/contact/edit/<%= contato.id %>" class="form-style" method="POST">
+                            <% } else { %>
+                                <form action="/contact/register" class="form-style" method="POST">
+                                    <% } %>
+                                        <input type="hidden" name="_csrf" value=<%=csrfToken%>>
+                                        <div class="container-field-style">
+                                            <label>Full Name:</label>
+                                            <input value="<%= contato.fullName %>" type="text" class="fields" name="fullName">
+                                        </div>
 
-                        <div class="container-field-style">
-                            <label>Email:</label>
-                            <input value="<%= contato.email %>" type="email" class="fields" name="email">
-                        </div>
+                                        <div class="container-field-style">
+                                            <label>Email:</label>
+                                            <input value="<%= contato.email %>" type="email" class="fields" name="email">
+                                        </div>
 
-                        <div class="container-field-style">
-                            <label>Phone:</label>
-                            <input value="<%= contato.phone %>" type="number" class="fields" name="phone">
-                        </div>
+                                        <div class="container-field-style">
+                                            <label>Phone:</label>
+                                            <input value="<%= contato.phone %>" type="number" class="fields" name="phone">
+                                        </div>
 
-                        <button class="button-submit">Salvar</button>
+                                        <button class="button-submit">Salvar</button>
 
-                    </form>
+                                </form>
                 </div>
             </div>
 
@@ -63,8 +67,11 @@
     </section>
 
     <script src="https://kit.fontawesome.com/313dbfcd46.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/bundle.js"></script>
-
+    <% if(contato.id) { %>
+        <script src="../../assets/js/bundle.js"></script>
+        <% } else { %>
+            <script src="../assets/js/bundle.js"></script>
+            <% } %>
 </body>
 
 </html>
